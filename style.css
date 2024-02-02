@@ -1,57 +1,83 @@
-body{
-    background-size: 100%;
-    background: #6EB3D9;
-    background: -webkit-linear-gradient(top left, #6EB3D9, #833479);
-    background: -moz-linear-gradient(top left, #6EB3D9, #833479);
-    background: linear-gradient(to bottom right, #6EB3D9, #833479);
-}
-
-img {
-    width: 50px;
-    height: auto;
-    object-fit: contain;
+body {
+  height: 100vh;
+  background-size: 100%;
+  background: #6EB3D9;
+  background: -webkit-linear-gradient(top left, #6EB3D9, #833479);
+  background: -moz-linear-gradient(top left, #6EB3D9, #833479);
+  background: linear-gradient(to bottom right, #6EB3D9, #833479);
 }
 
 h1 {
-    text-shadow: 0 0 3px whitesmoke;
+  text-shadow: 0 0 3px whitesmoke;
 }
 
 p {
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* FLEXBOX CUERPO */
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 70%;
+  section {
+    width: 40%;
+    height: 70%;
+  }
+}
+
+/* AREA DE TEXTO */
+textarea {
+  width: 100%;
+  height: 100%;
+}
+
+/* LOGO */
+img {
+  width: 50px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* BOTON */
 button {
-    background: black;
-    cursor: pointer;
-    border: none;
-    padding: 16px 32px;
-    color: #FFF;
-    font-size: 24PX;
-    font-weight: bold;
-    position: relative;
-    border-radius: 12px;
-    margin: 10px;
+  background: black;
+  cursor: pointer;
+  border: none;
+  padding: 16px 32px;
+  color: #FFF;
+  font-size: 24PX;
+  font-weight: bold;
+  position: relative;
+  border-radius: 12px;
+  margin: 10px;
 }
 
-button::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg,red,blue,deeppink,blue,red,blue,deeppink,blue);
-    background-size: 800%;
-    border-radius: 10px;
-    filter: blur(8px);
-    animation: glowing 20s linear infinite;
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue);
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
 }
 
-@keyframes glowing{
-    0%{background-position: 400% 0;}
-    100%{background-position: 0 0;}
+@keyframes glowing {
+  0% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
 }
 
 /* 
